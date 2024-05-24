@@ -9,32 +9,31 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
     <script src="https://kit.fontawesome.com/5571ab3578.js" crossorigin="anonymous"></script>
-    <title>AirQuality worldwide - Latest Update</title>
+    <title>AirQuality worldwide - close to you</title>
 </head>
 <body>
     <header>
         <h1>Wie ist die Luftqualität?</h1>
         <nav>
             <ul>
-                <li><a href="index.html" class ="active"><span>Aktuell </span><i class="fa-solid fa-clock-rotate-left"></i></a></li>
+                <li><a href="index.html"><span>Aktuell </span><i class="fa-solid fa-clock-rotate-left"></i></a></li>
                 <li><a href="parameters.html"><span>Parameter </span><i class="fa-solid fa-magnifying-glass"></i></a></li>
-                <li><a href="close.html"><span>In deiner Nähe </span><i class="fa-solid fa-location-crosshairs"></i></a></li>
+                <li><a href="close.html" class ="active"><span>In deiner Nähe </span><i class="fa-solid fa-location-crosshairs"></i></a></li>
                 <li><a href="about.html"><span>Über mich </span><i class="fa-regular fa-address-card"></i></a></li>
             </ul>
         </nav>
     </header>
     <main>
         <div id="map"></div>
-        <div id="main-content">
-        </div>
+        <div id="main-content"></div>
     </main>
 
     <footer>
         <p>© 2024 David Widmer. Alle Rechte vorbehalten.</p>
         <p>Website erstellt im Rahmen des Studiums "Multimedia Production" an der Fachhochschule Graubünden.</p>
     </footer>
+    
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-    <script src="js/script.js"></script>
-    <script src="js/script_latest.js"></script>
+    <script src="js/script_close.js"></script>
 </body>
 </html>

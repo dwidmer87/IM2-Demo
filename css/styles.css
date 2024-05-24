@@ -1,0 +1,223 @@
+/* Allgemeine Stile */
+*{
+    font-family: 'Barlow', sans-serif; /* Schriftart 'Barlow' für den Text */
+    font-size: 16px;
+    box-sizing: border-box;
+}
+/*----------------------------------------------------------------------------------------------------*/
+/* Stile für das gesamte Dokument */
+/*----------------------------------------------------------------------------------------------------*/
+body {
+    margin: 0;
+    padding: 0;
+    background: #fff url('../img/mountain_air_background.jpg') no-repeat center center fixed; 
+    color: #333; /* Dunkelgrau für Text */
+}
+
+h1, h2, h3, p {
+    margin: 0.5em 0 0.5em 0;
+}
+
+h3{
+    font-size: 1.2em;
+}
+
+/*----------------------------------------------------------------------------------------------------*/
+/* Header und NavBar */
+/*----------------------------------------------------------------------------------------------------*/
+header {
+    padding: 10px;
+}
+
+header h1 {
+    color: #181631; /* Dunkelgrau für Text */
+    margin: 0;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+header nav ul {
+    list-style: none; /* Entfernt die Aufzählungszeichen */
+    padding: 0;
+    display: flex; /* Verwendet Flexbox für die Navigation */
+    justify-content: space-around; /* Verteilt die Links gleichmäßig */
+    margin: 16px 0 2px 0;
+}
+
+header nav ul li a {
+    color: #ecf5fc; /* Helle Blaufarbe */
+    text-decoration: none;
+}
+header nav ul li a span {
+    display: none; /* Versteckt den Text für kleinere Bildschirme */
+    font-size: 1.2em; /* Schriftgröße */
+}
+
+header nav ul li a:hover {
+    color: #000000; /* Dunklere Blaufarbe beim Überfahren */
+}
+
+header nav ul li a.active {
+    color: #000000; /* Dunklere Blaufarbe für den aktiven Link */
+    font-weight: bold;
+}   
+
+@media (min-width: 600px) {
+    header h1 {
+        font-size: 2.5em; /* Größere Schriftgröße auf größeren Bildschirmen */
+    }
+
+    header nav ul {
+        justify-content: center; /* Mehr Platz zwischen den Links auf größeren Bildschirmen */
+        margin-bottom: 10px;
+    }
+
+    header nav ul li a {
+        margin: 0 30px; /* Mehr Platz zwischen den Links auf größeren Bildschirmen */
+    }
+
+    header nav ul li a span {
+        display: inline; /* Zeigt den Text für größere Bildschirme an */
+    }
+
+    header nav ul li a i {
+        display: none !important; /* Zeigt den Text für größere Bildschirme an */
+    }
+}
+
+/*----------------------------------------------------------------------------------------------------*/
+/* DropdownMenü (parameters.html) */
+/*----------------------------------------------------------------------------------------------------*/
+select#wantedParameter {
+    width: 95%; /* Volle Breite */
+    padding: 10px; /* Etwas Polsterung für bessere Lesbarkeit */
+    margin: 10px 2.5vw; /* Etwas Rand um die Dropdown-Liste */
+    font-size: 1em; /* Schriftgröße */
+    color: #333; /* Dunkelgrau für Text */
+    background-color: #f0f8ff; /* Helle Himmelsfarbe */
+    border: 1px solid #ccc; /* Grauer Rand */
+}
+
+select#wantedParameter option {
+    padding: 10px; /* Etwas Polsterung für bessere Lesbarkeit */
+}
+
+@media (min-width: 600px) {
+    select#wantedParameter {
+        position: absolute; /* Absolute Positionierung */
+        top: 120px; /* Position von oben */
+        left: 10px; /* Position von rechts */
+        z-index: 1; /* Z-Index, um über der Karte zu liegen */
+        width: auto; /* Automatische Breite auf größeren Bildschirmen */
+    }
+}
+
+/*----------------------------------------------------------------------------------------------------*/
+/* Darstellung Karte */
+/*----------------------------------------------------------------------------------------------------*/
+#map {
+    height: 90vh;
+    width: 100%;
+    opacity: 0.9; /* Leicht transparente Karte */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1), 0 6px 20px 0 rgba(0, 0, 0, 7); /* Weicher Rand */
+}
+
+@media (min-width: 600px) {
+    #map {
+        height: 95vh;
+    }
+}
+
+/*----------------------------------------------------------------------------------------------------*/
+/* Darstellung "Über mich" */
+/*----------------------------------------------------------------------------------------------------*/
+
+img {
+    display: block; /* Macht das Bild zu einem Blockelement */
+    max-width: 97%;
+    height: auto; /* Behält das Seitenverhältnis des Bildes bei */
+    margin: 10px 1.5vw; /* Zentriert das Bild horizontal und fügt oben und unten einen Rand hinzu */
+    border-radius: 10px; /* Runde Ecken */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Leichter Schatten für Tiefe */
+}
+
+.uebermich, .kontakt {
+    padding: 10px;
+    border-bottom: 1px dotted #474a758e;
+}
+
+.uebermich h2, .kontakt h2 {
+    color: #181631;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 0;
+}
+
+.uebermich p, .kontakt p{
+    font-size: 1.2em;
+    color: #666;
+    padding: 0 1.5vw;
+}
+
+@media (min-width: 600px) {
+    .uebermich, .kontakt {
+        padding: 20px;
+    }
+
+    .uebermich h2, .kontakt h2 {
+        color: #181631;
+        font-size: 1.5em;
+        font-weight: bold;
+        margin: 0;
+    }
+
+    .uebermich p, .kontakt p{
+        font-size: 1.2em;
+    }
+}
+
+.uebermich {
+    background-color: #f0f8ff;
+}
+
+@media (min-width: 600px) {
+    img {
+        height: 50vh;
+        margin: 20px 20px;
+    }
+    .uebermich{
+        display: flex;
+        justify-content: space-around;
+    }
+    .uebermich p{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 40px;
+    }
+}
+
+.kontakt {
+    background-color: #e6e6fa;
+}
+
+.kontakt a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+.kontakt a:hover {
+    text-decoration: underline;
+}
+
+/*----------------------------------------------------------------------------------------------------*/
+/* Footer */
+/*----------------------------------------------------------------------------------------------------*/
+footer {
+    background-color: #f0f8ff;
+    padding: 20px 5vw 10px 5vw;
+    text-align: center;
+    color: #333;
+    font-size: 0.5em;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 100vw;
+}
